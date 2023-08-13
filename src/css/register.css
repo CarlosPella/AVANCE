@@ -44,6 +44,10 @@ main{
 section.bienvenido{
     background-color: var(--background-bienvenido);
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 section.registro{
     background-color: var(--background-registro);
@@ -113,4 +117,47 @@ section.registro form button{
     padding: 0.75rem;
     color: var(--primary);
     font-size: 1.125rem;
+}
+
+.bienvenido.padre{
+    display: absolute;
+}
+
+.svg{
+    position: absolute;
+}
+
+.svg.star{
+    left: 0;
+}
+.svg.email{
+    right: 0;
+    bottom: 0;
+}
+
+.content{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.9375rem;
+    
+}
+
+.content h1{
+    font-size: 3.75rem;
+}
+.content p{
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    letter-spacing: -0.025rem;
+}
+
+.content div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 2rem;
 }
