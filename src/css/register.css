@@ -1,108 +1,114 @@
-:root{
+:root {
     --background-registro: #101828;
     --background-bienvenido: #191F37;
-    --Gray25:#F9F9F9;
-    --Gray100:#E6E6E6;
-    --Gray300:#B3B3B3;
-    --celestito:#3EC1F3;
+    --Gray25: #F9F9F9;
+    --Gray100: #E6E6E6;
+    --Gray300: #B3B3B3;
+    --celestito: #3EC1F3;
     --extracolor1: #8CEC75;
-    --extracolor2:#6CD0C4;
+    --extracolor2: #6CD0C4;
     --extracolor6: #53B4F5;
     --extracolor7: #A472EF;
-    --extracolor9:#FA7AB8;
+    --extracolor9: #FA7AB8;
     --warning: #FFB547;
-    --primary:#1A2574;
-    --primary-light:#CFD4F4;
+    --primary: #1A2574;
+    --primary-light: #CFD4F4;
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /*border: yellow 1px solid;*/
 }
-h1{
+
+h1 {
     color: var(--Gray25);
     font-size: 2.25rem;
 }
-p{
-    color:var(--Gray300);
+
+p {
+    color: var(--Gray300);
 }
-a{
-    color:var(--celestito);
+
+a {
+    color: var(--celestito);
     text-decoration: none;
 }
+
 body {
     height: 100vh;
     margin: 0;
-    overflow: hidden;
 }
-main{
+
+main {
     display: flex;
     height: 100vh;
 }
 
-section.bienvenido{
+section.bienvenido {
+    position: relative;
     background-color: var(--background-bienvenido);
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    justify-content: center;
 }
-section.registro{
+
+section.registro {
     background-color: var(--background-registro);
     display: flex;
     flex-direction: column;
     width: 100%;
     align-items: center;
     justify-content: center;
-    
+    gap: 5.6rem;
+
 }
 
-section.registro form{
-    margin-top: 100px;
+section.registro form {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 2.5rem;
-    width:50%;
+    width: 50%;
 }
 
 section.registro form input,
 section.registro form p,
 section.registro form select,
-section.registro form button{
+section.registro form button {
     width: 100%;
     font-size: 1rem;
 }
 
-section.registro form p{
+section.registro form p {
     text-align: right;
     font-size: 0.875rem;
 }
 
 section.registro form input,
-section.registro form select{
-    border:none;
+section.registro form select {
+    border: none;
     background-color: transparent;
     padding: 0.625rem 0rem;
-    outline: none; /* Elimina el contorno al enfocar */
-    color:var(--Gray300);
+    outline: none;
+    color: var(--Gray300);
 }
 
-section.registro form option{
+section.registro form option {
     background-color: var(--background-registro);
     padding-top: 10px;
 }
 
 
-section.registro form select{
-    appearance: none; /* Elimina la apariencia predeterminada (flecha) */
-    -webkit-appearance: none; /* Para navegadores basados en WebKit (Safari) */
+section.registro form select {
+    appearance: none;
+    -webkit-appearance: none;
 }
 
-.linea{
+.linea {
     display: flex;
     align-items: center;
     width: 100%;
@@ -110,7 +116,7 @@ section.registro form select{
     gap: 0.3125rem;
 }
 
-section.registro form button{
+section.registro form button {
     border-radius: 0.4375rem;
     background: var(--primary-light);
     border: none;
@@ -119,45 +125,98 @@ section.registro form button{
     font-size: 1.125rem;
 }
 
-.bienvenido.padre{
+.bienvenido.padre {
     display: absolute;
 }
 
-.svg{
+.svg {
     position: absolute;
 }
 
-.svg.star{
+.svg.star {
+    top: 0;
     left: 0;
 }
-.svg.email{
-    right: 0;
-    bottom: 0;
+
+.svg>svg {
+    width: 20rem;
+    height: auto;
 }
 
-.content{
+.svg.email {
+    bottom: 0;
+    right: 0;
+}
+
+.svg.cohete {
+    top: 0;
+    right: 0;
+    z-index: 0;
+    width: 16rem;
+    height: 16rem;
+}
+
+.header-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.header-form>svg {
+    align-self: flex-end;
+    margin-right: 5rem;
+    width: 2.84244rem;
+    height: 2.84244rem;
+}
+
+.content {
     width: 75%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     gap: 0.9375rem;
-    
+
 }
 
-.content h1{
+.content h1 {
     font-size: 3.75rem;
 }
-.content p{
+
+.content p {
     font-size: 1.25rem;
     line-height: 1.875rem;
     letter-spacing: -0.025rem;
 }
 
-.content div{
+.content div {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     padding-top: 2rem;
 }
+
+@media only screen and (max-width: 640px) {}
+
+@media only screen and (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    .content div {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 1024px) {}
+
+@media only screen and (max-width: 1280px) {}
+
+@media only screen and (max-width: 1536px) {}
