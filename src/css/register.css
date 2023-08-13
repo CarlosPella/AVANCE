@@ -1,0 +1,116 @@
+:root{
+    --background-registro: #101828;
+    --background-bienvenido: #191F37;
+    --Gray25:#F9F9F9;
+    --Gray100:#E6E6E6;
+    --Gray300:#B3B3B3;
+    --celestito:#3EC1F3;
+    --extracolor1: #8CEC75;
+    --extracolor2:#6CD0C4;
+    --extracolor6: #53B4F5;
+    --extracolor7: #A472EF;
+    --extracolor9:#FA7AB8;
+    --warning: #FFB547;
+    --primary:#1A2574;
+    --primary-light:#CFD4F4;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*border: yellow 1px solid;*/
+}
+h1{
+    color: var(--Gray25);
+    font-size: 2.25rem;
+}
+p{
+    color:var(--Gray300);
+}
+a{
+    color:var(--celestito);
+    text-decoration: none;
+}
+body {
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+main{
+    display: flex;
+    height: 100vh;
+}
+
+section.bienvenido{
+    background-color: var(--background-bienvenido);
+    width: 100%;
+}
+section.registro{
+    background-color: var(--background-registro);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+section.registro form{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    width:50%;
+}
+
+section.registro form input,
+section.registro form p,
+section.registro form select,
+section.registro form button{
+    width: 100%;
+    font-size: 1rem;
+}
+
+section.registro form p{
+    text-align: right;
+    font-size: 0.875rem;
+}
+
+section.registro form input,
+section.registro form select{
+    border:none;
+    background-color: transparent;
+    padding: 0.625rem 0rem;
+    outline: none; /* Elimina el contorno al enfocar */
+    color:var(--Gray300);
+}
+
+section.registro form option{
+    background-color: var(--background-registro);
+    padding-top: 10px;
+}
+
+
+section.registro form select{
+    appearance: none; /* Elimina la apariencia predeterminada (flecha) */
+    -webkit-appearance: none; /* Para navegadores basados en WebKit (Safari) */
+}
+
+.linea{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-bottom: var(--Gray300) 1px solid;
+    gap: 0.3125rem;
+}
+
+section.registro form button{
+    border-radius: 0.4375rem;
+    background: var(--primary-light);
+    border: none;
+    padding: 0.75rem;
+    color: var(--primary);
+    font-size: 1.125rem;
+}
